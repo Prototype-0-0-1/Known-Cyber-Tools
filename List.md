@@ -17,7 +17,7 @@ This list is the list of tools & concepts I have used and learnt
 5. theHarvester
 6. recon-ng
 7. maltego
-
+    
 ### Website/IP Info Gathering
 
 1. whois
@@ -59,6 +59,13 @@ This list is the list of tools & concepts I have used and learnt
 ## Covering Tracks
 
 - Remove executables, remove scripts, remove temporary file, restore settings, uninstall rootkits, remove additional user accounts
+
+## Deserialization
+
+- [ysoserial](https://github.com/frohoff/ysoserial) : A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization
+- [ysoserial.net](https://github.com/pwntester/ysoserial.net) : A proof-of-concept tool for generating payloads that exploit unsafe .NET object deserialization.
+- [Java-Deserialization-Cheat-Sheet](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet)
+- [Java Unmarshaller Security](https://github.com/mbechler/marshalsec) : Java Unmarshaller Security - Turning your data into code execution
 
 ----------------
 
@@ -116,6 +123,8 @@ This list is the list of tools & concepts I have used and learnt
 
 - [MSFconsole cheat sheet](https://www.offensive-security.com/metasploit-unleashed/msfconsole-commands/)
 - [The Exploit Database Git Repository](https://github.com/offensive-security/exploitdb)
+- [GTFOBins](https://gtfobins.github.io/)
+- [Living Off The Land Binaries, Scripts and Libraries](https://lolbas-project.github.io/)
 
 - [CVE Mitre](https://cve.mitre.org/)
 - [NATIONAL VULNERABILITY DATABASE](https://nvd.nist.gov/)
