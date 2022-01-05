@@ -17,7 +17,7 @@ This list is the list of tools & concepts I have used and learnt
 5. theHarvester
 6. recon-ng
 7. maltego
-    
+
 ### Website/IP Info Gathering
 
 1. whois
@@ -46,11 +46,12 @@ This list is the list of tools & concepts I have used and learnt
 
 1. searchsploit
 
-### Automated Credential Spray / Wordlist Attack
+### Automated Credential Spray / Wordlist Attack / Cracking Passwords
 
 1. brutespray
 2. Hydra
 3. John The Ripper
+4. Hashcat
 
 ## Maintaining Access
 
@@ -116,6 +117,36 @@ This list is the list of tools & concepts I have used and learnt
 8. [Blind-Sql-Bitshifting](https://github.com/awnumar/blind-sql-bitshifting) : Blind SQL-Injection via Bitshifting
 9. [Leviathan](https://github.com/leviathan-framework/leviathan) : Wide Range Mass Audit Toolkit
 10. [Blisqy](https://github.com/JohnTroony/Blisqy) : Exploit Time-based blind-SQL-injection in HTTP-Headers (MySQL/MariaDB)
+
+## Malware Analysis / Reverse Engineering
+
+### Malware Analsysis
+
+1. YARA
+2. yaGen
+3. Loki
+4. Thor
+
+### Reverse Engineering
+
+1. IDA Pro/Freeware
+2. Ghidra
+3. dnSpy
+4. gdb
+5. radare2 / iaito
+6. snowman c++
+
+### More
+
+1. oledump
+
+## Network Hacking
+
+1. python3 -> scapy
+2. wifite
+3. fern
+4. airmon-ng
+5. aircrack-ng
 
 ## Additional Resources
 
