@@ -63,7 +63,7 @@ This list is the list of tools & concepts I have used and learnt
 
 ## Privilege Escalation
 
-- [Linux PrivEsc](https://tryhackme.com/room/linprivesc) : Learn the fundamentals of Linux privilege escalation. From enumeration to exploitation, get hands-on with over 8 different privilege escalation techniques.
+[Linux PrivEsc](https://tryhackme.com/room/linprivesc) : Learn the fundamentals of Linux privilege escalation. From enumeration to exploitation, get hands-on with over 8 different privilege escalation techniques.
 
 - [LinPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
 - [LinEnum](https://github.com/rebootuser/LinEnum)
