@@ -61,6 +61,16 @@ This list is the list of tools & concepts I have used and learnt
 
 - Remove executables, remove scripts, remove temporary file, restore settings, uninstall rootkits, remove additional user accounts
 
+## Privilege Escalation
+
+- [Linux PrivEsc](https://tryhackme.com/room/linprivesc) : Learn the fundamentals of Linux privilege escalation. From enumeration to exploitation, get hands-on with over 8 different privilege escalation techniques.
+
+- [LinPeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS)
+- [LinEnum](https://github.com/rebootuser/LinEnum)
+- [LES (Linux Exploit Suggester)](https://github.com/mzet-/linux-exploit-suggester)
+- [Linux Smart Enumeration](https://github.com/diego-treitos/linux-smart-enumeration)
+- [Linux Priv Checker](https://github.com/linted/linuxprivchecker)
+
 ## Deserialization
 
 - [ysoserial](https://github.com/frohoff/ysoserial) : A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization
@@ -79,6 +89,7 @@ This list is the list of tools & concepts I have used and learnt
 - [remote and local file inclusion](https://github.com/payloadbox/rfi-lfi-payload-list)
 - [Command Injection Payload List](https://github.com/payloadbox/command-injection-payload-list#command-injection-payload-list)
 - [Open Redirect Payload List](https://github.com/payloadbox/open-redirect-payload-list)
+- [log4j-scan](https://github.com/fullhunt/log4j-scan) : A fully automated, accurate, and extensive scanner for finding vulnerable log4j hosts
 
 1. Burp Suite
 2. OWASP Zap
@@ -126,6 +137,8 @@ This list is the list of tools & concepts I have used and learnt
 2. yaGen
 3. Loki
 4. Thor
+5. [Intezer Analyze](https://analyze.intezer.com)
+6. [Virtustotal](https://www.virustotal.com)
 
 ### Reverse Engineering
 
