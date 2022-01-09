@@ -129,6 +129,7 @@ We will need the hash value of the password we want the new user to have. This c
     openssl passwd -1 -salt <salt-vale> <password>
 
 -1 > MD5-based password algorithm
+
 -salt val > Use provided salt
 
 Since we used the MD5 hash with salt, the output would be something like:
