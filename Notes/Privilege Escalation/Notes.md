@@ -100,3 +100,49 @@ We need to run the program by specifying the LD_PRELOAD option, as follows;
     sudo LD_PRELOAD=/home/user/ldpreload/shell.so find
 
 ## SUID
+
+Much of Linux privilege controls rely on controlling the users and files interactions. This is done with permissions. By now, you know that files can have read, write, and execute permissions. These are given to users within their privilege levels. This changes with SUID (Set-user Identification) and SGID (Set-group Identification). These allow files to be executed with the permission level of the file owner or the group owner, respectively.
+You will notice these files have an "s" bit set showing their special permission level.
+
+List files that have SUID or SGID bits set:
+
+    find / -type f -perm -04000 -ls 2>/dev/null
+
+A good practice would be to compare executables on this list with [GTFOBins](https://gtfobins.github.io). Clicking on the SUID button will filter binaries known to be exploitable when the SUID bit is set.
+GTFObins does not directly provide us with an easy win. Typical to real-life privilege escalation scenarios, we will need to find intermediate steps that will help us leverage whatever minuscule finding we have.
+Let's consider the example: The SUID bit set for the nano text editor allows us to create, edit and read files using the file owner's privilege.
+Nano is owned by root, which probably means that we can read and edit files at a higher privilege level than our current user has. At this stage, we have two basic options for privilege escalation: reading the /etc/shadow file or adding our user to /etc/passwd.
+
+### Option 1: Read /etc/shadow & Crack the password
+
+We see that the nano text editor has the SUID bit set by running the find / -type f -perm -04000 -ls 2>/dev/null command.
+
+    "nano /etc/shadow" will print the contents of the /etc/shadow file.
+
+We can now use the unshadow tool to create a file crackable by John the Ripper. To achieve this, unshadow needs both the /etc/shadow and /etc/passwd files.
+
+### Option 2 : Add a new user that has root privileges
+
+This would help us circumvent the tedious process of password cracking.
+We will need the hash value of the password we want the new user to have. This can be done quickly using the openssl tool on Kali Linux.
+
+    openssl passwd -1 -salt <salt-vale> <password>
+
+-1 > MD5-based password algorithm
+-salt val > Use provided salt
+
+Since we used the MD5 hash with salt, the output would be something like:
+
+    $1$<salt-value>$<some-hash>
+
+This entire thing is the salted hash. Which can then be added into the /etc/passwd file. Thus, at the end of the file, we add:
+
+    hackeruser:$1$<salt-value>$<some-hash>:0:0:root:/root:/bin/bash
+
+- hackeruser > it is the username
+- The entire salted hash has to be pasted here
+- root:/bin/bash was used to get a root shell
+
+Once our user is added (please note how root:/bin/bash was used to provide a root shell) we will need to switch to this user and hopefully should have root privileges.
+
+## Capabilities
