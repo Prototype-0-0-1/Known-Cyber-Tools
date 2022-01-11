@@ -175,8 +175,8 @@ We can easily modify it to create a reverse shell, hopefully with root privilege
 The script will use the tools available on the target system to launch a reverse shell.
 Important points:
 
-    The command syntax will vary depending on the available tools. (e.g. nc will probably not support the -e option you may have seen used in other cases)
-    We should always prefer to start reverse shells, as we not want to compromise the system integrity during a real penetration testing engagement.
+1. The command syntax will vary depending on the available tools. (e.g. nc will probably not support the -e option you may have seen used in other cases)
+2. We should always prefer to start reverse shells, as we not want to compromise the system integrity during a real penetration testing engagement.
 
 Crontab is always worth checking as it can sometimes lead to easy privilege escalation vectors. The following scenario is not uncommon in companies that do not have a certain cyber security maturity level:
 
