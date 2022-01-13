@@ -52,6 +52,13 @@ This list is the list of tools & concepts I have used and learnt
 2. Hydra
 3. John The Ripper
 4. Hashcat
+5. [wordlistctl](https://github.com/BlackArch/wordlistctl): Script to fetch, install, update and search wordlist archives from websites offering wordlists with more than 6400 wordlists available
+6. [Haiti](https://noraj.github.io/haiti/#/): A CLI tool (and library) to identify hash types (hash type identifier)
+7. [Mentalist](https://github.com/sc0tfree/mentalist): Mentalist is a graphical tool for custom wordlist generation
+8. [CeWL](https://github.com/digininja/CeWL): CeWL is a Custom Word List Generator
+9. [TTPassGen](https://github.com/tp7309/TTPassGen): Flexible and scriptable password dictionary generator which can support brute-force,combination,complex rule mode etc
+10. [lyricpass](https://github.com/initstring/lyricpass): Generate lyric-based passphrase wordlists for offline password cracking.
+11. [pnwgen](https://github.com/toxydose/pnwgen): Phone number Wordlist Generator
 
 ## Maintaining Access
 
@@ -165,6 +172,7 @@ This list is the list of tools & concepts I have used and learnt
 
 - [have i been pwned](https://haveibeenpwned.com/)
 
+- [Rawsec's CyberSecurity Inventory](https://inventory.raw.pm/overview.html): An inventory of tools and resources about CyberSecurity
 - [MSFconsole cheat sheet](https://www.offensive-security.com/metasploit-unleashed/msfconsole-commands/)
 - [The Exploit Database Git Repository](https://github.com/offensive-security/exploitdb)
 - [GTFOBins](https://gtfobins.github.io/)
