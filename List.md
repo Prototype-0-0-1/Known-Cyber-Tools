@@ -146,6 +146,8 @@ This list is the list of tools & concepts I have used and learnt
 4. Thor
 5. [Intezer Analyze](https://analyze.intezer.com)
 6. [Virtustotal](https://www.virustotal.com)
+7. [Any.run](https://any.run/)
+8. MobSF
 
 ### Reverse Engineering
 
@@ -155,6 +157,14 @@ This list is the list of tools & concepts I have used and learnt
 4. gdb
 5. radare2 / iaito
 6. snowman c++
+7. dex2jar
+8. Java ByteCode Editor
+9. Java Decompiler
+10. Enigma
+11. Krakatau
+12. Java Disassembler
+13. recaf
+14. MARA Framework
 
 ### More
 
