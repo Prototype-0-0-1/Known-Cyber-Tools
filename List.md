@@ -152,19 +152,20 @@ This list is the list of tools & concepts I have used and learnt
 ### Reverse Engineering
 
 1. IDA Pro/Freeware
-2. Ghidra
-3. dnSpy
-4. gdb
-5. radare2 / iaito
-6. snowman c++
-7. dex2jar
-8. Java ByteCode Editor
-9. Java Decompiler
-10. Enigma
-11. Krakatau
-12. Java Disassembler
-13. recaf
-14. MARA Framework
+2. Ghidra : [Cheatsheet](https://ghidra-sre.org/CheatSheet.html)
+3. x64dbg
+4. dnSpy
+5. gdb
+6. radare2 / iaito
+7. snowman c++
+8. dex2jar
+9. Java ByteCode Editor
+10. Java Decompiler
+11. Enigma
+12. Krakatau
+13. Java Disassembler
+14. recaf
+15. MARA Framework
 
 ### More
 
