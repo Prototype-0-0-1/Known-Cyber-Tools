@@ -149,6 +149,7 @@ This list is the list of tools & concepts I have used and learnt
 7. [Any.run](https://any.run/)
 8. MobSF
 9. [Pithus](https://beta.pithus.org/)
+10. PE Studio
 
 ### Reverse Engineering
 
@@ -159,15 +160,14 @@ This list is the list of tools & concepts I have used and learnt
 5. gdb
 6. radare2 / iaito
 7. snowman c++
-8. PE Studio
-9. dex2jar
-10. Java ByteCode Editor
-11. Java Decompiler
-12. Enigma
-13. Krakatau
-14. Java Disassembler
-15. recaf
-16. MARA Framework
+8. dex2jar
+9. Java ByteCode Editor
+10. Java Decompiler
+11. Enigma
+12. Krakatau
+13. Java Disassembler
+14. recaf
+15. MARA Framework
 
 ### More
 
