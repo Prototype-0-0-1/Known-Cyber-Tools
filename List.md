@@ -181,6 +181,15 @@ This list is the list of tools & concepts I have used and learnt
 4. airmon-ng
 5. aircrack-ng
 
+## Malware Resources
+
+[Ref](https://tryhackme.com/room/pyramidofpainax)
+    [MalwareBazaar](https://bazaar.abuse.ch/) and [Malshare](https://malshare.com/) are good resources to provide you with access to the samples, malicious feeds, and YARA results - these all can be very helpful when it comes to threat hunting and incident response.
+
+    For detection rules, [SOC Prime Threat Detection Marketplace](https://tdm.socprime.com/) is a great platform, where security professionals share their detection rules for different kinds of threats including the latest CVE's that are being exploited in the wild by adversaries.
+
+    Fuzzy hashing is also a strong weapon against the attacker's tools. Fuzzy hashing helps you to perform similarity analysis - match two files with minor differences based on the fuzzy hash values. One of the examples of fuzzy hashing is the usage of [SSDeep](https://ssdeep-project.github.io/ssdeep/index.html); on the SSDeep official website, you can also find the complete explanation for fuzzy hashing. 
+
 ## Additional Resources
 
 - [have i been pwned](https://haveibeenpwned.com/)
