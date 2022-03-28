@@ -6,6 +6,19 @@ This list is the list of tools & concepts I have used and learnt
 
 1. Metasploit
 
+### Languages
+
+1. Python
+2. C/C++ (Also CUDA C/C++)
+3. Java
+4. Rust
+5. Javascript
+6. Powershell
+7. Bash Shell
+8. .NET
+9. PHP
+10. Lua
+
 ## Reconnaissance
 
 ### OSINT
